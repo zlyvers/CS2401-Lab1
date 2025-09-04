@@ -34,7 +34,7 @@ MyTime MyTime::operator + (const MyTime& t2) const{
 
 MyTime MyTime::operator - (const MyTime& t2) const{
 	MyTime tmp;
-	tmp.minutes = abs((hours * 60 + minutes) - (hours * 60 + t2.minutes));
+	tmp.minutes = abs((hours * 60 + minutes) - (t2.hours * 60 + t2.minutes));
 	tmp.simplify();
 	return tmp;
 }
